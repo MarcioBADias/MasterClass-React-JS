@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <title>Bateria de desafios 01</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    
+    <div class="root"></div>
+    <script type="text/babel">
+
+        const App = () => {
+            return(
+                <h1>Olha mundo!</h1>
+            )
+        }
+
+        const container = document.querySelector('.root')
+        const root = ReactDOM.createRoot(container)
+
+        root.render(<App />)
+    </script>
 </body>
 </html>
