@@ -21,6 +21,23 @@
             </div>
         )
 
+        const Message = ({ role, content }) => (
+            <div>
+                <div>
+                    <img 
+                        src={role === 'assistant' ?
+                         "./assets/icon-bot.png" :
+                         "./assets/icon-user.png"} 
+                         alt="Avatar do perfil" 
+                         style={{
+                            width: 40
+                         }}
+                         />    
+                </div>
+                <p>{content}</p>
+            </div>
+        )
+
         const App = () => {
             const products = [
                 {
@@ -75,6 +92,12 @@
                                 />
                             ))
                         }
+                    </div>
+
+                    <div>
+                        <h1>Desafio #6</h1>
+                        <Message role="assistant" content="O trabalho do programador é transformar café em código?" />
+                        <Message role="human" content="Não. É gerar valor." />
                     </div>
                 </>
             )
